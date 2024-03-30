@@ -1,0 +1,60 @@
+body{
+    background-color:#FDF6F6;
+}
+
+.apps:hover{
+    color: black;
+    font-size: large;
+}
+#name{
+    color:   #002C54;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#education{
+    color:   #C5001A;
+}
+.NameAndNav{
+    display: flex;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 1000px;
+    margin-right: 20px;
+}
+
+#profile{
+    display: flex;
+    color:   #C5001A;
+}
+
+#image{
+    border-radius: 25%;
+    margin-left: 250px;
+}
+
+.apps{
+    padding: 30px 30px 30px 30px;
+    color: darkorchid;
+    font-size: larger;
+
+}
+
+#skills{
+    margin-top: 200px;
+    background-color: ;
+}
+#education{
+    margin-top: 200px;
+}
+
+#connect{
+    margin-top: 200px;
+}
+
+.heading{
+    color: #002C54;
+}
+
