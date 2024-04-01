@@ -1,19 +1,19 @@
 body{
-    background-color:#FDF6F6;
+    background-color: black;
 }
 
 .apps:hover{
-    color: black;
+    color: white;
     font-size: large;
 }
 #name{
-    color:   #002C54;
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 #education{
-    color:   #C5001A;
+    color:   white;
 }
 .NameAndNav{
     display: flex;
@@ -27,7 +27,7 @@ body{
 
 #profile{
     display: flex;
-    color:   #C5001A;
+    color:   white;
 }
 
 #image{
@@ -37,7 +37,7 @@ body{
 
 .apps{
     padding: 30px 30px 30px 30px;
-    color: darkorchid;
+    color: rgb(253, 0, 0);
     font-size: larger;
 
 }
@@ -55,6 +55,32 @@ body{
 }
 
 .heading{
-    color: #002C54;
+    color: white;
 }
 
+.edu{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.college{
+    background-color: grey;
+    height: 170px;
+    width: 300px;
+    text-align: center;
+}
+
+.college:hover{
+    height: 200px;
+    width: 350px;
+    background-color: #6670de;
+}
+.skills1{
+    height: 200px;
+    width: 15%;
+    margin-right: 20px;
+}
+.skills1:hover{
+    height: 220px;
+}
