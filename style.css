@@ -9,6 +9,8 @@ body{
 #name{
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    padding-top: 10px;
 }
 
 
@@ -17,6 +19,8 @@ body{
 }
 .NameAndNav{
     display: flex;
+    background-color: grey;
+    margin-bottom: 20px;
 }
 .nav{
     display: flex;
@@ -28,17 +32,23 @@ body{
 #profile{
     display: flex;
     color:   white;
+    align-items: center;
+    justify-content: center;
+    padding-left: 120px;
 }
 
 #image{
     border-radius: 25%;
     margin-left: 250px;
+    padding-right: 40px;
+    padding-top: 20px;
 }
 
 .apps{
-    padding: 30px 30px 30px 30px;
+    padding: 20px 20px 20px 30px;
     color: rgb(253, 0, 0);
-    font-size: larger;
+    font-size: large;
+
 
 }
 
@@ -83,4 +93,16 @@ body{
 }
 .skills1:hover{
     height: 220px;
+}
+
+.connection{
+     border-radius: 25%;
+     margin-right: 10px;
+}
+.letsconnect{
+    /* width: 200px; */
+    margin-left: 510px;
+    margin-bottom: 30px;
+    background-color: inherit;
+    
 }
