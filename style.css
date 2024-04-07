@@ -20,7 +20,8 @@ body{
 }
 .NameAndNav{
     display: flex;
-    background-color: grey;
+    /* background-color: grey; */
+    background-color: rgb(232, 230, 230);
     margin-bottom: 20px;
 }
 .nav{
