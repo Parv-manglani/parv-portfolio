@@ -215,3 +215,176 @@ body { background: var(--bg-main); color: var(--text-main); overflow-x: hidden; 
         justify-content: center;
     }
 }
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+
+/* GENERAL FIX */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}
+
+/* ================= HEADER ================= */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 12px;
+    }
+
+    .nav a {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .nav-cta {
+        padding: 6px 16px;
+    }
+}
+
+/* ================= HERO ================= */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 120px 20px 80px;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+        line-height: 1.2;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* ================= ABOUT SECTION ================= */
+@media (max-width: 768px) {
+    .about-wrapper {
+        gap: 50px;
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
+
+    .stats-bar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .image-stack {
+        width: 260px;
+        height: 330px;
+    }
+
+    .experience-badge {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ================= SKILLS / PROJECTS ================= */
+@media (max-width: 768px) {
+    .skills-grid,
+    .projects-grid,
+    .edu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card,
+    .project-card,
+    .edu-card {
+        padding: 24px;
+    }
+}
+
+/* ================= EXPERIENCE ================= */
+@media (max-width: 768px) {
+    .experience-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .exp-card ul {
+        padding-left: 18px;
+    }
+}
+
+/* ================= CONNECT SECTION ================= */
+@media (max-width: 768px) {
+    .connect-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .connect-header p {
+        font-size: 1rem;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .social-box {
+        padding: 20px;
+    }
+}
+
+/* ================= FOOTER ================= */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.8rem;
+        padding: 30px 15px;
+    }
+}
+
+/* ================= VERY SMALL DEVICES ================= */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+}
