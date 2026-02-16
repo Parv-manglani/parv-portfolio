@@ -3,93 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parv manglani</title>
+    <title>Parv Manglani | AI & Data Science</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 </head>
+
 <body>
-    <div class="NameAndNav">
-        <div>
-        <!-- <h1 id="name">Parv Manglani</h1> -->
-        <h1><img src="../public/images/name.jpeg" alt="" height="80px" id="name" width="300px"></h1>
-        </div>
-        <div class="nav">
-            <a href="#profile" class="apps" ><button class="apps">Profile</button></a>
-            <a href="#skills" class="apps" ><button class="apps">Skills</button></a>
-            <a href="#education" class="apps"><button class="apps">Education</button></a>
-            <a href="#connect" class="apps"><button class="apps">Connect</button></a>
-        </div>
-    </div>
-    <div id="profile">
-        <div class="profileLeft">
-        <div><h2 class="heading">Profile:</h2></div>
-        <p>Deeply passionate about diving into python and web development and data science. 
-        I possess a strong grasp of python programming and web dev concepts.
-        Actively hone skills in competitive programming to engage in coding contests.
-        Keen to further expand my expertise in emerging technologies and make a positive impact through this.</p>
-        <h4>Name: Parv manglani</h4>
-        <h4>Date of birth: 02 january, 2004</h4>
-        <h4>Address: Bangalore, karnataka, India</h4>
-        <h4>Email: parvmanglani2@gmail.com</h4>
-        </div>
-        <div>
-            <img src="../public/images/final.jpg" alt="" id="image" height="500px" width="400px">
-        </div>
-    </div>
+    <canvas id="particleCanvas"></canvas>
 
-    <div id="skills">
-        <h2 class="heading">Skills:</h2>
-        <div>
-        <div class="skills">
-            <img src="../public/images/spresadsheet.png" alt="" class="skills1 connection">
-            <img src="../public/images/c programming.png" alt="" class="skills1 connection">
-            <img src="../public/images/python.jpeg" alt="" class="skills1 connection">
-            <img src="../public/images/html.png" alt="" class="skills1 connection">
-            <img src="../public/images/css.png" alt="" class="skills1 connection">
-            <img src="../public/images/sql.png" alt="" class="skills1 connection">
+    <header class="header">
+        <div class="header-left">
+            <img src="../public/images/name.jpeg" alt="Parv Manglani" height="70">
         </div>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#connect" class="nav-cta">Let's Connect</a>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="reveal">Hi, I'm <span class="highlight">Parv Manglani.</span></h1>
+            <h2 class="reveal">I turn <span id="typed-text"></span></h2>
+            <p class="reveal">AI & Data Science undergraduate specializing in transforming complex datasets into business growth.</p>
+            <div class="hero-btns reveal">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#connect" class="btn-secondary">Get In Touch</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="education">
-        <h2 class="heading">Education:</h2>
-        <div>
+    <section id="about" class="section about">
+    <div class="container about-wrapper">
+        <div class="about-content">
+            <div class="section-title-wrapper">
+                <span class="sub-title">Discovery</span>
+                <h2>About Me</h2>
+            </div>
+            
+            <p class="about-description">
+                I am a motivated and analytical <strong>AI & Data Science undergraduate</strong> with hands-on experience in <strong>data analytics, automation, dashboarding, and machine learning</strong>. I specialize in transforming complex datasets into actionable insights using Python, SQL, Power BI, and ML techniques.
+            </p>
+            
+            <p class="about-description">
+                Currently working as a <strong>Business Analyst Intern at PW Institute of Innovation</strong>, where I design automated reporting systems and interactive dashboards for multi-center academic operations.
+            </p>
 
-            <div class="edu">
-                <div class="college">
-                   <h3>12th</h3>
-                   <p>The balaghat Public School balaghat</p>
-                   <p>passing year 2022</p>
-
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">1+</span>
+                    <span class="stat-label">Years Experience</span>
                 </div>
-                <div class="college">
-                    <h3>IIT GUWAHATI {persuing}</h3>
-                    <p>BSc.(hons) AI and DS</p>
-                   <p>passing year 2027</p>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projects Built</span>
                 </div>
-                <div class="college">
-                    <h2>certification course {persuing}</h2>
-                    <h3>PW Institue of innovation</h3>
-                    <p>passing year 2027</p>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Accuracy Mindset</span>
                 </div>
+            </div>
+
+            <div class="personal-info-grid">
+                <div class="info-chip"><i class="fas fa-map-marker-alt"></i> Bangalore, India</div>
+                <div class="info-chip"><i class="fas fa-calendar-alt"></i> 02 Jan 2004</div>
+                <div class="info-chip"><i class="fas fa-envelope"></i> parvmanglani2@gmail.com</div>
             </div>
         </div>
 
-        <div id="connect">
-            <h2 class="heading">Connect:</h2>
-            <div class="letsconnect"><img src="./lets connect.png" alt="" ></div>
-            <div>
-                <a href="https://www.linkedin.com/in/parv-manglani/"><img src="../public/images/linkedin.png" alt="" class="connection"></a>
-                <a href="https://github.com/Parv-manglani/"><img src="../public/images/github.png" alt="" class="connection"></a>
-                <a href="https://hashnode.com/@parvfact"><img src="../public/images/hashnode.png" alt="" class="connection"></a>
-                <a href="https://www.instagram.com/parvmanglani/"><img src="../public/images/instagram.jpeg" alt="" class="connection"></a>
-                <a href="https://twitter.com/ParvManglani"><img src="../public/images/twitter.jpeg" alt="" class="connection"></a>
-
+        <div class="about-image-container">
+            <div class="image-stack">
+                <div class="main-img-wrapper">
+                    <img src="../public/images/final.jpg" alt="Parv Manglani">
+                </div>
+                <div class="blob-element"></div>
+                <div class="experience-badge">
+                    <i class="fas fa-brain"></i>
+                    <span>AI Specialist</span>
+                </div>
             </div>
         </div>
     </div>
+</section>
 
-    
+    <section id="skills" class="section">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><h3>Programming</h3><p>Python, SQL, C, C++, Java (Basics), JavaScript</p></div>
+            <div class="skill-card"><h3>Data & Analytics</h3><p>Power BI, Advanced Excel, Data Visualization, ETL Concepts</p></div>
+            <div class="skill-card"><h3>Machine Learning</h3><p>NumPy, Pandas, Scikit-learn, TensorFlow (Basics), Time Series Analysis</p></div>
+            <div class="skill-card"><h3>Automation & Tools</h3><p>Google Apps Script, n8n, Snowflake (Basic)</p></div>
+            <div class="skill-card"><h3>Web Tech</h3><p>HTML, CSS</p></div>
+            <div class="skill-card"><h3>Core Concepts</h3><p>ML, Statistics, Data Preprocessing, DSA, Competitive Programming</p></div>
+        </div>
+    </section>
 
-    
+    <section id="experience" class="section">
+        <h2>Professional Experience</h2>
+        <div class="experience-container">
+            <div class="card exp-card">
+                <h3>Business Analyst Intern</h3>
+                <p class="company">PW Institute of Innovation (PW IOI) | Sept 2025 – Present</p>
+                <ul>
+                    <li>Designed and maintained interactive Power BI dashboards for attendance, admissions, academic results, and KPIs.</li>
+                    <li>Automated daily and weekly reports using Google Apps Script and n8n.</li>
+                    <li>Cleaned, merged, and validated large multi-center datasets.</li>
+                    <li>Analyzed attendance, IVR calls, tickets, and admissions funnels to identify operational gaps.</li>
+                    <li>Collaborated with batch managers to standardize data entry and improve data quality.</li>
+                </ul>
+            </div>
+            <div class="card exp-card">
+                <h3>AI Content Intern</h3>
+                <p class="company">Hue Learn, Bangalore | Mar 2025 – May 2025</p>
+                <ul>
+                    <li>Developed AI & Data Science educational content for enterprise clients.</li>
+                    <li>Created Python-based ML examples and datasets.</li>
+                    <li>Simplified complex ML concepts using visualizations.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card"><h3>Stock Price Prediction (LSTM)</h3><p>Built an LSTM-based deep learning model to predict Apple stock prices using TensorFlow and yfinance.</p></div>
+            <div class="project-card"><h3>OCR-Based Marks Extraction</h3><p>Developed an automated pipeline using Tesseract OCR and Python for marks extraction.</p></div>
+            <div class="project-card"><h3>Shark Tank India SQL Analysis</h3><p>Analyzed funding trends, pitch conversions, and shark-wise investments using SQL.</p></div>
+            <div class="project-card"><h3>Wine Recommendation System</h3><p>Built a clustering-based recommendation engine using correlation analysis.</p></div>
+            <div class="project-card"><h3>Zoom Clone UI</h3><p>Developed a responsive frontend clone using HTML and CSS.</p></div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <div class="edu-grid">
+            <div class="edu-card"><h3>IIT Guwahati</h3><p>B.S. (Hons) AI & Data Science | 2023 – 2027</p></div>
+            <div class="edu-card"><h3>PW Institute of Innovation</h3><p>CSE Certification | 2023 – 2027</p></div>
+            <div class="edu-card"><h3>MP Board</h3><p>Class 12 (Maths): 90% | Class 10: 98%</p></div>
+        </div>
+    </section>
+
+    <section id="connect" class="section connect-section">
+        <div class="connect-container reveal">
+            <div class="connect-header">
+                <h2>Let's Build Something Great</h2>
+                <p>I am currently seeking opportunities in <strong>AI/ML, Data Science, and Business Analytics</strong>. My inbox is always open!</p>
+            </div>
+            
+            <div class="social-grid">
+                <a href="https://www.linkedin.com/in/parv-manglani/" class="social-box linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Parv-manglani/" class="social-box github" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://hashnode.com/@parvfact" class="social-box hashnode" target="_blank">
+                    <i class="fa-brands fa-hashnode"></i>
+                    <span>Hashnode</span>
+                </a>
+                <a href="https://twitter.com/ParvManglani" class="social-box twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://www.instagram.com/parvmanglani/" class="social-box instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="mailto:parvmanglani2@gmail.com" class="social-box email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Me</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Parv Manglani | Engineered for Excellence</p>
+    </footer>
+
+    <script src="./effects.js"></script>
 </body>
 </html>
