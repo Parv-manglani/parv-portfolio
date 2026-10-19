@@ -28,9 +28,9 @@ const themeBtn = document.getElementById('theme-toggle');
 const themeIcon = themeBtn.querySelector('i');
 
 themeBtn.addEventListener('click', () => {
-    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
-    themeIcon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
 });
 
 // ── 4. MOBILE NAV TOGGLE ─────────────────────────────────────

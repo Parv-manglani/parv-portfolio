@@ -6,10 +6,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 /* ── DESIGN TOKENS ── */
+/* Default: warm cream. Dark is the [data-theme="dark"] override below. */
 :root {
+    --bg:           #f6f1e7;
+    --bg-2:         #fbf8f1;
+    --bg-card:      rgba(255, 252, 246, 0.88);
+    --header-bg:    rgba(246, 241, 231, 0.86);
+    --border:       rgba(60, 45, 20, 0.11);
+    --border-hover: rgba(79, 70, 229, 0.45);
+    --text:         #1c1917;
+    --text-muted:   #6b645a;
+    --accent:       #4f46e5;
+    --accent-2:     #0f766e;
+    --grad:         linear-gradient(135deg, #4f46e5 0%, #7c3aed 55%, #db2777 100%);
+    --grad-subtle:  linear-gradient(135deg, rgba(79,70,229,.08), rgba(219,39,119,.05));
+    --shadow:       0 24px 64px rgba(90, 65, 20, 0.12);
+    --shadow-glow:  0 12px 40px rgba(79, 70, 229, 0.16);
+    --card-shadow:  0 1px 0 rgba(255,255,255,.9) inset, 0 10px 30px rgba(90, 65, 20, 0.07);
+    --blob-1:       #a5b4fc;
+    --blob-2:       #fdba74;
+    --grid-line:    rgba(60, 45, 20, 0.06);
+    --radius:       14px;
+    --radius-lg:    22px;
+    --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+    --transition:   all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
     --bg:           #060b18;
     --bg-2:         #0d1628;
     --bg-card:      rgba(13, 22, 40, 0.85);
+    --header-bg:    rgba(6, 11, 24, 0.88);
     --border:       rgba(99, 102, 241, 0.15);
     --border-hover: rgba(99, 102, 241, 0.45);
     --text:         #f0f4ff;
@@ -20,26 +47,10 @@
     --grad-subtle:  linear-gradient(135deg, rgba(99,102,241,.10), rgba(34,211,238,.06));
     --shadow:       0 24px 64px rgba(0, 0, 0, 0.6);
     --shadow-glow:  0 8px 40px rgba(99, 102, 241, 0.25);
-    --radius:       14px;
-    --radius-lg:    22px;
-    --ease:         cubic-bezier(0.4, 0, 0.2, 1);
-    --transition:   all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-[data-theme="light"] {
-    --bg:           #f4f7ff;
-    --bg-2:         #ffffff;
-    --bg-card:      rgba(255, 255, 255, 0.92);
-    --border:       rgba(99, 102, 241, 0.18);
-    --border-hover: rgba(99, 102, 241, 0.5);
-    --text:         #0f172a;
-    --text-muted:   #64748b;
-    --accent:       #4f46e5;
-    --accent-2:     #0891b2;
-    --grad:         linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0891b2 100%);
-    --grad-subtle:  linear-gradient(135deg, rgba(79,70,229,.07), rgba(8,145,178,.05));
-    --shadow:       0 24px 64px rgba(99, 102, 241, 0.10);
-    --shadow-glow:  0 8px 40px rgba(99, 102, 241, 0.18);
+    --card-shadow:  none;
+    --blob-1:       #6366f1;
+    --blob-2:       #22d3ee;
+    --grid-line:    rgba(99, 102, 241, 0.09);
 }
 
 /* ── RESET ── */
@@ -173,7 +184,7 @@ h1, h2, h3 {
     align-items: center;
     padding: 0 40px;
     height: 70px;
-    background: rgba(6, 11, 24, 0.88);
+    background: var(--header-bg);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--border);
@@ -1221,18 +1232,18 @@ h1, h2, h3 {
 
 /* ══ FOUNDER UPGRADE ══ */
 /* hero: aurora + grid */
-.hero { position: relative; overflow: hidden; box-shadow: inset 0 -240px 160px -100px var(--bg); }
+.hero { position: relative; overflow: visible; }
 .hero::before, .hero::after {
     content: ''; position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55;
     pointer-events: none; z-index: 0; animation: drift 14s ease-in-out infinite alternate;
 }
-.hero::before { width: 560px; height: 560px; background: #6366f1; top: -120px; left: 4%; opacity: .38; }
-.hero::after  { width: 480px; height: 480px; background: #22d3ee; bottom: -140px; right: 6%; opacity: .22; animation-delay: -6s; }
+.hero::before { width: 560px; height: 560px; background: var(--blob-1); top: -120px; left: 4%; opacity: .5; }
+.hero::after  { width: 480px; height: 480px; background: var(--blob-2); bottom: -140px; right: 6%; opacity: .4; animation-delay: -6s; }
 @keyframes drift { to { transform: translate(90px, 60px) scale(1.15); } }
 .hero-content { position: relative; z-index: 2; max-width: 1040px; }
 .hero .hero-bg-glow {
     width: 1500px; height: 950px; top: 40%;
-    background-image: linear-gradient(rgba(99,102,241,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,.09) 1px, transparent 1px);
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 56px 56px;
     -webkit-mask-image: radial-gradient(ellipse at center, #000 10%, transparent 70%);
             mask-image: radial-gradient(ellipse at center, #000 10%, transparent 70%);
@@ -1281,7 +1292,7 @@ h1, h2, h3 {
 .pipeline { list-style: none; display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; position: relative; z-index: 1; margin-top: 6px; }
 .pipeline::before {
     content: ''; position: absolute; left: 4%; right: 4%; top: 18px; height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(99,102,241,.6), rgba(34,211,238,.6), transparent);
+    background: linear-gradient(90deg, transparent, rgba(79,70,229,.6), rgba(219,39,119,.5), transparent);
 }
 .pipeline::after {
     content: ''; position: absolute; top: 14px; left: 4%; width: 10px; height: 10px; border-radius: 50%;
@@ -1317,3 +1328,15 @@ h1, h2, h3 {
 @media (prefers-reduced-motion: reduce) { .hero::before, .hero::after, .pipeline::after, .photo-ring { animation: none; } }
 
 .dc-logo { background: #000; padding: 0; border: 1px solid var(--border-hover); box-shadow: 0 8px 30px rgba(34,211,238,.18); overflow: hidden; }
+
+
+/* ── CREAM THEME POLISH ── */
+.skill-card, .project-card, .venture-card, .edu-card, .timeline-content, .stats-row { box-shadow: var(--card-shadow); }
+.venture-card.featured { background: var(--bg-card); }
+.venture-logo { border: 1px solid var(--border); }
+.dc-logo { border-color: var(--border-hover); }
+.hero-badge { background: rgba(255,252,246,.7); }
+[data-theme="dark"] .hero-badge { background: rgba(99,102,241,.08); }
+.btn-ghost { background: rgba(255,252,246,.6); }
+[data-theme="dark"] .btn-ghost { background: transparent; }
+::selection { background: rgba(79,70,229,.2); }
