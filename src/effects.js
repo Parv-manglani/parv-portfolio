@@ -1,6 +1,6 @@
 // ── 1. TYPEWRITER EFFECT ──────────────────────────────────────
 new Typed('#typed-text', {
-    strings: ['AI for venture capital.', 'agents that do the research.', 'deal flow on autopilot.', 'products that ship.'],
+    strings: ['AI agents.', 'products that ship.', 'research on autopilot.', 'things from zero.'],
     typeSpeed: 50,
     backSpeed: 30,
     loop: true

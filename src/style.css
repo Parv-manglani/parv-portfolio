@@ -1315,3 +1315,5 @@ h1, h2, h3 {
     .hero::before { width: 380px; height: 380px; } .hero::after { width: 340px; height: 340px; }
 }
 @media (prefers-reduced-motion: reduce) { .hero::before, .hero::after, .pipeline::after, .photo-ring { animation: none; } }
+
+.dc-logo { background: #000; padding: 0; border: 1px solid var(--border-hover); box-shadow: 0 8px 30px rgba(34,211,238,.18); overflow: hidden; }
