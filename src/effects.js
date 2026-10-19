@@ -1,6 +1,6 @@
 // ── 1. TYPEWRITER EFFECT ──────────────────────────────────────
 new Typed('#typed-text', {
-    strings: ['Data into Insights.', 'Models into Solutions.', 'Code into Automation.', 'AI into Reality.'],
+    strings: ['AI for venture capital.', 'agents that do the research.', 'deal flow on autopilot.', 'products that ship.'],
     typeSpeed: 50,
     backSpeed: 30,
     loop: true
@@ -151,3 +151,13 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => observer.observe(s));
+
+
+// ── SPOTLIGHT: cards light up where the mouse is ───────────────
+document.querySelectorAll('.spot').forEach(el => {
+    el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+});
